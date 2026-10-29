@@ -9,8 +9,10 @@
 
 | 文件 | 内容 |
 | --- | --- |
-| [workflow.md](./workflow.md) | 工作流骨架、权限、并发、超时 |
+| [workflow.md](./workflow.md) | 完整工作流文件、权限、并发、超时、单仓与多包 |
+| [release-gate.md](./release-gate.md) | 门禁脚本的接口、必查项、dist-tag 与发布说明 |
 | [trusted-publishing.md](./trusted-publishing.md) | 首发手动、OIDC 配置、来源证明、令牌回退 |
+| [pitfalls.md](./pitfalls.md) | 故障对照表与反模式 |
 
 ## 装进来的位置
 
