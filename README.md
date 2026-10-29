@@ -11,6 +11,7 @@
 | id | 内容 | 位置 |
 | --- | --- | --- |
 | `dsh-plugin` | DeepSeek Harness 插件：宿主/浏览器契约、清单、打包、发布、测试 | [`specs/dsh-plugin/`](./specs/dsh-plugin/index.md) |
+| `npm-publish` | GitHub Actions 发布 npm：标签触发、OIDC、来源证明、分发标签 | [`specs/npm-publish/`](./specs/npm-publish/npm-publish/index.md) |
 
 ## 安装
 
@@ -29,6 +30,20 @@ trellis init --registry gh:Misaka10091/trellis-spec-market/specs/dsh-plugin --ap
 ```
 
 需要 Trellis 0.7.0-beta 以上（`--registry` 在该版本可用）。
+
+### 同时装多个模板
+
+`--template` 是单值参数，**一次 init 只能装一个**。要叠加就多跑几次，每次都带 `--append`：
+
+```bash
+trellis init --registry gh:Misaka10091/trellis-spec-market --template dsh-plugin   --append
+trellis init --registry gh:Misaka10091/trellis-spec-market --template npm-publish --append
+```
+
+有两个由 CLI 行为带来的限制，设计模板时必须知道：
+
+1. **落点相同**。所有模板都复制到 `.trellis/spec/` 根下，`--append` 只补缺失文件，同名路径会被**静默跳过**。所以每个模板要么独占根目录，要么像 `npm-publish` 那样把内容放进自己的子目录（装成 `.trellis/spec/npm-publish/`）。`scripts/check.mjs` 会校验两个模板之间没有重名路径。
+2. **升级记录只有一个**。`.trellis/config.yaml` 的 `registry.spec` 只保存一个 `source` + `template`，后装的会覆盖先装的，`trellis update` 只会刷新最后那个。要用 `trellis update` 管理多个模板，目前还做不到；升级其余模板需要重新跑一次 init。
 
 ## 新增一个模板
 
