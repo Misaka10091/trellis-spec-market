@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "dsh-plugin",
+      "type": "spec",
+      "name": "DeepSeek Harness 插件规范",
+      "description": "宿主与浏览器两半的契约、bundle 清单、打包与发布约定。",
+      "path": "specs/dsh-plugin",
+      "tags": ["dsh", "deepseek-harness", "plugin", "esm"]
+    }
+  ]
+}
