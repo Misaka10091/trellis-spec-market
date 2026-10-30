@@ -1,0 +1,5 @@
+# 默认责任人；开启 “Require review from Code Owners” 后才强制。
+*            @Misaka10091
+/specs/      @Misaka10091
+/scripts/    @Misaka10091
+/.github/    @Misaka10091

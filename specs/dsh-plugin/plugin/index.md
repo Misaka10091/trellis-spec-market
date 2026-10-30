@@ -26,7 +26,7 @@
 ```bash
 npm run check            # 语法 + 结构检查 + node:test 不变量
 npm pack --dry-run       # 实际发布的文件列表本身也是契约
-node scripts/prepare-release.mjs vX.Y.Z .dry-run   # 打标签前跑
+node scripts/prepare-release.mjs vX.Y.Z .release-dry-run   # 打标签前跑
 ```
 
 `npm run check` 通过、并且 `npm pack --dry-run` 既包含全部运行期文件、又不夹带非运行期文件，才算改完。

@@ -16,6 +16,14 @@
       "description": "标签触发、OIDC 可信发布、来源证明与分发标签，与语言栈无关。",
       "path": "specs/npm-publish",
       "tags": ["npm", "github-actions", "release", "provenance"]
+    },
+    {
+      "id": "github-dev",
+      "type": "spec",
+      "name": "GitHub 开发规范",
+      "description": "分支保护、提交与 PR、Actions 权限与不可信输入。",
+      "path": "specs/github-dev",
+      "tags": ["github", "git", "pull-request", "actions"]
     }
   ]
 }

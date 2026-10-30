@@ -7,7 +7,7 @@
 ## 打标签前的门禁
 
 ```bash
-node scripts/prepare-release.mjs vX.Y.Z .dry-run
+node scripts/prepare-release.mjs vX.Y.Z .release-dry-run
 ```
 
 它校验：标签形状、预发布标识不带前导零、两份清单版本一致、`repository.url` 真实（npm 的来源证明会把产物绑定到它）、以及 `CHANGELOG.md` 里有对应标签的非空段落。

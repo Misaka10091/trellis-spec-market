@@ -16,13 +16,13 @@
 
 ## 装进来的位置
 
-本模板的内容会落在 `.trellis/spec/npm-publish/`，不会覆盖 `.trellis/spec/index.md` 或其它模板的文件。
+本模板的内容会落到 `.trellis/spec/release/`，命名空间全局唯一，不会覆盖其它模板的文件。
 
 ## 质量门
 
 ```bash
 npm pack --dry-run          # 实际发包内容
-node scripts/prepare-release.mjs vX.Y.Z .dry-run   # 若仓库有发布门禁脚本
+node scripts/prepare-release.mjs vX.Y.Z .release-dry-run   # 若仓库有发布门禁脚本
 ```
 
 ## 三条硬约束
