@@ -21,7 +21,7 @@
       "id": "github-dev",
       "type": "spec",
       "name": "GitHub 开发规范",
-      "description": "分支保护、提交与 PR、Actions 权限与不可信输入。",
+      "description": "分支保护、GitHub noreply 与 Trellis 身份隐私、提交与 PR、Actions 权限与不可信输入。",
       "path": "specs/github-dev",
       "tags": ["github", "git", "pull-request", "actions"]
     }

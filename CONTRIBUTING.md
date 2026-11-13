@@ -23,6 +23,8 @@ node scripts/check.mjs
 ## 提交与 PR
 
 - Conventional Commits：`feat` / `fix` / `docs` / `refactor` / `test` / `chore`。
+- author / committer 的姓名使用公开别名，邮箱使用本人 GitHub noreply 地址；配置与检查见 [提交身份与隐私](./specs/github-dev/github/identity.md)。
+- 使用 Trellis 时，`.trellis/.developer` 和生成记录中的开发者标识使用公开别名，不暴露真实姓名或邮箱；本地身份文件不入库。
 - 每个 PR 填完模板四段（做了什么、为什么、怎么验证、风险与回滚）。
 - CI 必须全绿，失败原因要定位，不要靠重跑。
 - 不提交密钥、内部地址、客户数据；不提交 `.trellis/tasks/`、`.trellis/workspace/` 等运行态。

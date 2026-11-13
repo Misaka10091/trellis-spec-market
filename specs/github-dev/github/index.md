@@ -1,6 +1,6 @@
 # GitHub 开发规范
 
-仓库协作、分支与 PR、Actions 卫生。与语言栈无关，任何在 GitHub 上协作的项目都适用。
+仓库协作、提交身份与隐私、分支与 PR、Actions 卫生。与语言栈无关，任何在 GitHub 上协作的项目都适用。
 
 > 与 `npm-publish` 的分工：那边讲发布流水线与凭据，这里讲日常协作与仓库配置。
 
@@ -9,6 +9,7 @@
 | 文件 | 内容 |
 | --- | --- |
 | [repository.md](./repository.md) | 默认分支、分支保护、CODEOWNERS、合并策略、安全开关 |
+| [identity.md](./identity.md) | GitHub noreply、公开别名、Trellis 开发者标识与隐私检查 |
 | [pull-requests.md](./pull-requests.md) | 分支命名、提交信息、PR 模板、评审与合并 |
 | [actions.md](./actions.md) | 权限最小化、固定版本、并发与超时、不可信输入 |
 
@@ -19,6 +20,8 @@
 ## 开工前自查
 
 - [ ] 这个改动会进 `main` 吗？是的话走 PR，不直推。
+- [ ] Git 的 author / committer 是否都使用公开别名和 GitHub noreply 邮箱？见 [提交身份与隐私](./identity.md)。
+- [ ] `.trellis/.developer`、工作区路径和待公开记录是否只使用公开别名，没有真实姓名或邮箱？
 - [ ] 提交信息是否说明了**为什么**，而不只是改了什么？
 - [ ] 新增的 workflow 是否声明了最小权限，而不是继承默认值？
 - [ ] 是否引入了对 PR 内容的执行（`pull_request_target` + checkout PR 代码）？
@@ -36,3 +39,4 @@
 
 - CI 全绿，且失败原因已定位（不是重跑到绿）
 - 无未解决的 review 讨论
+- 提交身份符合 noreply 与公开别名要求，Trellis 开发者信息及待公开记录无真实姓名或邮箱

@@ -34,7 +34,7 @@ trellis-spec-market/
 | --- | --- | --- | --- |
 | `dsh-plugin` | DeepSeek Harness 插件：宿主/浏览器契约、清单、打包、发布、测试 | `.trellis/spec/plugin/` | [`specs/dsh-plugin/plugin/`](./specs/dsh-plugin/plugin/index.md) |
 | `npm-publish` | GitHub Actions 发布 npm：标签触发、OIDC、来源证明、分发标签 | `.trellis/spec/release/` | [`specs/npm-publish/release/`](./specs/npm-publish/release/index.md) |
-| `github-dev` | GitHub 开发规范：分支保护、PR、Actions 卫生 | `.trellis/spec/github/` | [`specs/github-dev/github/`](./specs/github-dev/github/index.md) |
+| `github-dev` | GitHub 开发规范：分支保护、noreply 与 Trellis 身份隐私、PR、Actions 卫生 | `.trellis/spec/github/` | [`specs/github-dev/github/`](./specs/github-dev/github/index.md) |
 
 三者安装后各占一个领域目录：
 

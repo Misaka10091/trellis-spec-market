@@ -13,6 +13,10 @@ docs/multi-template-guide
 
 不要用 `dev`、`test`、`my-branch` 这类无法判断意图的名字，也不要在同一分支上混多个不相关的改动。
 
+## 提交身份
+
+提交前按 [提交身份与隐私](./identity.md) 配置并检查 author / committer：姓名使用公开别名，邮箱使用本人 GitHub noreply 地址。提交正文、协作者尾注、PR 内容与 Trellis 生成记录也不能暴露真实姓名或私人、公司邮箱。
+
 ## 提交信息
 
 Conventional Commits：
@@ -70,6 +74,8 @@ squash 合并时，PR 标题就是最终提交信息，所以 PR 标题要按同
 - [ ] 至少一个 approve，且讨论已解决
 - [ ] 分支已更新到最新 `main`
 - [ ] PR 标题符合提交信息规范（squash 后会成为正式提交）
+- [ ] 本次全部提交的 author / committer 都使用公开别名和 GitHub noreply；正文、尾注与最终 squash 身份已核对
+- [ ] `.trellis/.developer` 未被跟踪，工作区路径、任务、日志和 PR 附件无真实姓名或邮箱
 - [ ] 无临时调试代码、无 `console.log`/`print` 残留、无被注释掉的旧实现
 
 ## 不要做的
