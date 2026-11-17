@@ -24,6 +24,14 @@
       "description": "分支保护、GitHub noreply 与 Trellis 身份隐私、提交与 PR、Actions 权限与不可信输入。",
       "path": "specs/github-dev",
       "tags": ["github", "git", "pull-request", "actions"]
+    },
+    {
+      "id": "node",
+      "type": "spec",
+      "name": "Node.js 项目规范",
+      "description": "包管理与依赖（pnpm 首选、锁文件、engines 与 Node 版本）、package.json 脚本与 workspace 约定。",
+      "path": "specs/node",
+      "tags": ["node", "pnpm", "dependencies", "workspace", "monorepo"]
     }
   ]
 }

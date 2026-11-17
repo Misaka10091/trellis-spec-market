@@ -17,8 +17,10 @@ trellis-spec-market/
     │   └── plugin/            #   安装命名空间 -> .trellis/spec/plugin/
     ├── npm-publish/           # 模板包：id = npm-publish
     │   └── release/           #   安装命名空间 -> .trellis/spec/release/
-    └── github-dev/            # 模板包：id = github-dev
-        └── github/            #   安装命名空间 -> .trellis/spec/github/
+    ├── github-dev/            # 模板包：id = github-dev
+    │   └── github/            #   安装命名空间 -> .trellis/spec/github/
+    └── node/                  # 模板包：id = node
+        └── node/              #   安装命名空间 -> .trellis/spec/node/
 ```
 
 关键约定：
@@ -35,14 +37,16 @@ trellis-spec-market/
 | `dsh-plugin` | DeepSeek Harness 插件：宿主/浏览器契约、清单、打包、发布、测试 | `.trellis/spec/plugin/` | [`specs/dsh-plugin/plugin/`](./specs/dsh-plugin/plugin/index.md) |
 | `npm-publish` | GitHub Actions 发布 npm：标签触发、OIDC、来源证明、分发标签 | `.trellis/spec/release/` | [`specs/npm-publish/release/`](./specs/npm-publish/release/index.md) |
 | `github-dev` | GitHub 开发规范：分支保护、noreply 与 Trellis 身份隐私、PR、Actions 卫生 | `.trellis/spec/github/` | [`specs/github-dev/github/`](./specs/github-dev/github/index.md) |
+| `node` | Node.js 项目规范：pnpm 首选与依赖管理、锁文件与 Node 版本、package.json 脚本与 workspace | `.trellis/spec/node/` | [`specs/node/node/`](./specs/node/node/index.md) |
 
-三者安装后各占一个领域目录：
+四者安装后各占一个领域目录：
 
 ```
 .trellis/spec/
 ├── plugin/
 ├── release/
-└── github/
+├── github/
+└── node/
 ```
 
 ## 安装
@@ -115,7 +119,7 @@ trellis init --registry gh:Misaka10091/trellis-spec-market#v2.0.0 --template dsh
 ## 命名与版本
 
 - `id` 用 `<技术栈或领域>`，全小写、连字符分隔：`dsh-plugin`、`npm-publish`、`spring-boot`。
-- 命名空间用**领域名**，不要用包名：`plugin`、`release`、`github`。它决定安装后的 `.trellis/spec/<dir>/`，一旦发布就当作稳定路径。
+- 命名空间用**领域名**，不要用包名：`plugin`、`release`、`github`、`node`。它决定安装后的 `.trellis/spec/<dir>/`，一旦发布就当作稳定路径。
 - 破坏性重写换新 `id`（如 `dsh-plugin-v2`），不要原地改语义；改安装命名空间同样是不兼容变化，按 SemVer 抬 MAJOR。
 - 版本用 **SemVer**：`vMAJOR.MINOR.PATCH`，标签带 `v` 前缀：
   - **MAJOR**：不兼容变更——安装路径 / 命名空间改名、删除模板、改 `id` 语义、迁移布局。
